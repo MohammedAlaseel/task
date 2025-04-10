@@ -1,0 +1,28 @@
+Steps:
+1-Generater SSH key:
+Open command prompt(cmd) and run this command
+ssh-keygen -t ed25519 -C”your email associated with github”
+you will be asked where to save the key, the default location is
+~/.ssh/id_ed25519
+You will then be prompted to enter a passphrase, enter one for more security.
+2-Add your public SSH key to your Github account:
+You have f file name (.ssh) inside it there is a file named (id_ed25519)
+Open it and copy the content.
+Add to Github:
+Open Github website settings(SSH and GPG keys)(add SSH key)
+In the key field paste the key copied in the previous step
+  3-create local Git repository:
+Open command prompt(cmd)
+Navigate to the directory where you want to create your project
+Run this command to initialize new git repo: (git init)
+4-Create a remote repository on github:
+5- Link Your Local Repository to the Remote GitHub Repository using SSH:
+Copy the SSH URL of your newly created repository on GitHub
+Run this command to add the remote repo:
+Git remote add origin (SSH URL)
+6. Add Your Project Files to the Local Repository:
+Git add .
+7-Commit your changes:
+Git commit -m “message”
+8-push your local repo to Github:
+Git push -u origin master
